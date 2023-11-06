@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class WordGuess {
     public static char[] getWord(){
-        String[] words = {"cat,", "dog", "rabbit", "turtle", "book", "fish"};
+        String[] words = {"cat", "dog", "rabbit", "turtle", "book", "fish"};
         Random random = new Random();
         int i = random.nextInt(6);
         return words[i].toCharArray();

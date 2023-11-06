@@ -26,7 +26,7 @@ public class Hangman {
 
       System.out.println("Let's Play Word Guess version 1.0");
 
-      while(attempts > 0) {
+      while (attempts > 0) {
          System.out.print("You have " + attempts + " attempts left: ");
 
          System.out.println(guess);
@@ -35,20 +35,22 @@ public class Hangman {
 
          char correctAnswer = input.next().charAt(0);
 
-         for (int i = 0; i < word.length; i++){
+         for (int i = 0; i < word.length; i++) {
             if (correctAnswer == word[i]) {
                guess[i] = correctAnswer;
             }
          }
-         if(isWordGuessed(guess)){
-            String x = new String (word);
+         if (isWordGuessed(guess)) {
+            String x = new String(word);
             System.out.println("You guessed " + x + " correctly!");
             correct = true;
             break;
          }
          attempts--;
       }
-      if (!correct)
-         System.out.println("You did not guess correctly!");
+      if (!correct) {
+         String x = new String(word);
+         System.out.println("You did not guess correctly! The word was: " + x);
+      }
    }
- }
+}
