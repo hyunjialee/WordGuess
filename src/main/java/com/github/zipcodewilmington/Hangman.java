@@ -38,15 +38,13 @@ public class Hangman {
          for (int i = 0; i < word.length; i++) {
             if (correctAnswer == word[i]) {
                guess[i] = correctAnswer;
-            }
-         }
-         if (isWordGuessed(guess)) {
+               }
+         } if (isWordGuessed(guess)) {
             String x = new String(word);
             System.out.println("You guessed " + x + " correctly!");
             correct = true;
             break;
-         }
-         attempts--;
+         } attempts--;
       }
       if (!correct) {
          String x = new String(word);

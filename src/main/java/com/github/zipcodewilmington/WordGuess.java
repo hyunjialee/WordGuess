@@ -11,16 +11,16 @@ public class WordGuess {
     }
 
     public static char[] display(char[] word) {
-        String input = "";
+        StringBuilder input = new StringBuilder();
 
         for (int i = 0; i <word.length; i++) {
-            input = input + "_";
+            input.append("_");
         }
-        return input.toCharArray();
+        return input.toString().toCharArray();
     }
     public static boolean isWordGuessed(char[] guess) {
-        for (char c :guess) {
-            if (c == '_'){
+        for (char x : guess) {
+            if (x == '_') {
                 return false;
             }
         }
